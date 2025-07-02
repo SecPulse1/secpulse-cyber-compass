@@ -5,6 +5,19 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import NewsCard from './NewsCard';
 
+interface NewsItem {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  date: string;
+  source: string;
+  category: string;
+  readTime: string;
+  priority: 'critical' | 'high' | 'medium';
+  readMoreUrl: string;
+}
+
 const HomePage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -20,7 +33,7 @@ const HomePage: React.FC = () => {
   }, []);
 
   // Enhanced mock news data
-  const mockNews = [
+  const mockNews: NewsItem[] = [
     {
       id: '1',
       title: 'Critical Zero-Day Vulnerability in Popular Web Framework Exposes Millions',

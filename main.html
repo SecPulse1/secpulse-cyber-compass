@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecPulse - Smart Cybersecurity Hub</title>
+    <meta name="description" content="SecPulse is a smart cybersecurity hub that curates real-time security news, essential tools, and custom learning maps—tailored for professionals, learners, and tech enthusiasts worldwide.">
+    <meta name="author" content="Boudali Fateh">
+    <meta name="keywords" content="cybersecurity, security news, penetration testing, cybersecurity tools, learning platform">
+    
+    <meta property="og:title" content="SecPulse - Smart Cybersecurity Hub">
+    <meta property="og:description" content="SecPulse is a smart cybersecurity hub that curates real-time security news, essential tools, and custom learning maps—tailored for professionals, learners, and tech enthusiasts worldwide.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.svgrepo.com/show/284852/worldwide-security-security.svg">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.svgrepo.com/show/284852/worldwide-security-security.svg">
+    
+    <link rel="icon" href="https://www.svgrepo.com/show/284852/worldwide-security-security.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styleee.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="https://www.svgrepo.com/show/284852/worldwide-security-security.svg" alt="SecPulse Logo" class="logo-icon">
+                    <span class="logo-text">SecPulse</span>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="nav">
+                    <a href="#" class="nav-link active">Home</a>
+                    <a href="#" class="nav-link">Tools</a>
+                    <a href="#" class="nav-link">Learning</a>
+                    <a href="#" class="nav-link">Roadmap</a>
+                    <a href="#" class="nav-link">About</a>
+                    <a href="#" class="nav-link">Contact</a>
+                </nav>
+                
+                <!-- Controls -->
+                <div class="controls">
+                    <button class="theme-toggle" id="themeToggle">🌙</button>
+                    <select class="language-select" id="languageSelect">
+                        <option value="en">EN</option>
+                        <option value="ar">AR</option>
+                    </select>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 3h18l-1 13H4z"/>
+                            <path d="M16 16l1.5 2 3-3"/>
+                        </svg>
+                    </div>
+                    <h1 class="hero-title">Latest Cybersecurity News</h1>
+                    <p class="hero-description">
+                        Stay ahead of cyber threats with real-time security intelligence curated from trusted sources worldwide. 
+                        Get instant access to critical vulnerabilities, threat analysis, and security insights.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="status-dot"></div>
+                            Live Updates
+                        </div>
+                        <div class="stat">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            Updated hourly
+                        </div>
+                        <div class="stat">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                                <polyline points="15,3 21,3 21,9"/>
+                                <line x1="10" y1="14" x2="21" y2="3"/>
+                            </svg>
+                            Verified sources
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Filters -->
+        <section class="filters-section">
+            <div class="container">
+                <div class="filters-card">
+                    <div class="search-bar">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.35-4.35"/>
+                        </svg>
+                        <input type="text" placeholder="Search cybersecurity news, sources, or keywords..." id="searchInput">
+                    </div>
+                    
+                    <div class="sort-buttons">
+                        <button class="sort-btn active" data-sort="date">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                            Latest
+                        </button>
+                        <button class="sort-btn" data-sort="priority">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="22,3 2,3 10,12.46 10,19 14,21 14,12.46"/>
+                            </svg>
+                            Priority
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Category Pills -->
+                <div class="categories">
+                    <button class="category-pill active" data-category="all">All News <span class="count">50</span></button>
+                    <button class="category-pill" data-category="vulnerabilities">Vulnerabilities <span class="count">15</span></button>
+                    <button class="category-pill" data-category="malware">Malware & Threats <span class="count">12</span></button>
+                    <button class="category-pill" data-category="cloud">Cloud Security <span class="count">8</span></button>
+                    <button class="category-pill" data-category="mobile">Mobile Security <span class="count">6</span></button>
+                    <button class="category-pill" data-category="infrastructure">Infrastructure <span class="count">9</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Grid -->
+        <section class="news-section">
+            <div class="container">
+                <div class="results-summary">
+                    <p>Showing <span class="count-highlight">50</span> articles</p>
+                    <button class="bookmarks-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
+                        </svg>
+                        3 Bookmarked
+                    </button>
+                </div>
+                
+                <div class="news-grid" id="newsGrid">
+                    <!-- News cards will be generated by JavaScript -->
+                </div>
+                
+                <div class="load-more">
+                    <button class="load-more-btn">
+                        Load More Articles
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                            <polyline points="15,3 21,3 21,9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="https://www.svgrepo.com/show/284852/worldwide-security-security.svg" alt="SecPulse Logo" class="footer-logo-icon">
+                        <span class="footer-logo-text">SecPulse</span>
+                    </div>
+                    <p class="footer-description">
+                        SecPulse is a smart cybersecurity hub that curates real-time security news, essential tools, 
+                        and custom learning maps—tailored for professionals, learners, and tech enthusiasts worldwide.
+                    </p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            contact@secpulse.com
+                        </div>
+                        <div class="contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <circle cx="12" cy="16" r="1"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                            </svg>
+                            Cybersecurity Intelligence Hub
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Categories -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Vulnerabilities</a></li>
+                        <li><a href="#">Malware Analysis</a></li>
+                        <li><a href="#">Cloud Security</a></li>
+                        <li><a href="#">Mobile Security</a></li>
+                        <li><a href="#">AI Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="social-section">
+                <h3 class="social-title">Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100070026216872" target="_blank" class="social-link">
+                        <img src="https://www.svgrepo.com/show/452196/facebook-1.svg" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/_bdl._.fateh_/" target="_blank" class="social-link">
+                        <img src="https://www.svgrepo.com/show/452229/instagram-1.svg" alt="Instagram">
+                    </a>
+                    <a href="https://www.linkedin.com/in/fateh-boudali-34a320371/" target="_blank" class="social-link">
+                        <img src="https://www.svgrepo.com/show/448234/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.fiverr.com/s/ljyr1pb" target="_blank" class="social-link">
+                        <img src="https://www.svgrepo.com/show/306054/fiverr.svg" alt="Fiverr">
+                    </a>
+                    <a href="https://www.freelancer.com/u/SecPulse" target="_blank" class="social-link">
+                        <img src="https://www.svgrepo.com/show/473616/freelancer.svg" alt="Freelancer">
+                    </a>
+                    <a href="https://coff.ee/secpulse" target="_blank" class="social-link">
+                        <img src="https://logowik.com/content/uploads/images/buy-me-a-coffee6984.jpg" alt="Buy Me a Coffee">
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Bottom Section -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>&copy; 2025 SecPulse. All rights reserved.</p>
+                        <p>Built with ❤️ by <span class="author">Boudali Fateh</span> - Cybersecurity Specialist</p>
+                    </div>
+                    <div class="status">
+                        <div class="status-item">
+                            <div class="status-dot online"></div>
+                            All systems operational
+                        </div>
+                        <div class="status-divider">•</div>
+                        <div class="status-item">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <circle cx="12" cy="16" r="1"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                            </svg>
+                            Secure & Verified
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripttt.js"></script>
+</body>
+</html>
